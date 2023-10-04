@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표(table)</title>
+    <style>
+        table {
+            /* 인접라인을 하나로 합침*/
+            border-collapse: collapse;
+        }
+        th, td {
+            /* 라인두께, 실선, 색상 */
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        th {
+            background-color: royalblue;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead> <!-- 웹 접근성 때문에 넣어주는것..-->
+            <tr>
+                <th>번호</th>
+                <th>내용</th>
+                <th>수량</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>콜라</td>
+                <td>1개</td>
+                <td>1,500원</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>사이다</td>
+                <td>2개</td>
+                <td rowspan="2">2,000원</td> 
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>탄산수</td>
+                <td>3개</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>총금액</td>
+                <td colspan="3">5,500원</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
