@@ -1,0 +1,17 @@
+h1{
+    font-size: 22px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 100px;
+    background-color: royalblue;
+    color: white;
+}
+div {
+    width: 200px;
+    color: red;
+    background-color: bisque;
+    padding: 1px 10px;
+}
