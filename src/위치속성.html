@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023-10-10</title>
+    <style>
+        /* positin 속성 : 요소의 위치를 지정하는데 사용하는 속성 */
+        /* static : 기본 속성, 요소를 문서의 흐름에 따라 배치 */
+        /* relative : 요소를 원래 위치에서 상대적으로 이동시킴 */
+        /* absolute : 요소를 부모 요소 기준으로 절대적인 위치에 배치 */
+        /* fixed : 요소를 viewport 기준으로 절대적인 위치에 배치 */
+        /* sticky : 요소가 스크롤 되는 동안 상위 요소에 고정되도록 지정 */
+
+        /* z-index :
+         * 같은 형제끼리는 z인덱스가 존재함, 튀어나온 정도
+         * 마우스를 가져다댔을때 효과를 넣을 때 사용. 포지션 특성이 static 이면 안됨.
+        */
+        body {
+            margin: 0;
+        }
+        .container {
+            width: 300px;
+            background-color: royalblue;
+            position: relative; /*부모의 포지션을 선언을 해줘야함,*/
+        }
+        .container .item {
+            width: 100px;
+            height: 100px;
+            border: 4px dashed red;
+            background-color: orange;
+        }
+        .container .item:nth-child(1) {
+            position: relative;
+        }
+        .container .item:nth-child(2) {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .container .item:nth-child(3) {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>
